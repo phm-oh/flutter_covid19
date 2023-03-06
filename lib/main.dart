@@ -124,38 +124,83 @@ class _MyHomePageState extends State<MyHomePage> {
     print('build state');
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 192, 207, 139),
+      backgroundColor: Color.fromARGB(255, 247, 246, 248),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 115, 145, 7),
+        backgroundColor: Color.fromARGB(255, 145, 181, 16),
         title: Center(child: Text(widget.title)),
 
       ),
       body:ListView(
         children:  [
              Card(
+               color: Color.fromRGBO(214, 91, 63, 0.659),
                child:ListTile(
-                title: Text('ผู้ติดเชื้อสะสม'),
-                subtitle:Text('${_data?[0]?.totalCase ?? 'Loading'}'),
+                title: Text('ผู้ติดเชื้อสะสม',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                )),
+                subtitle:Text('${_data?[0]?.totalCase ?? 'Loading'}  ราย',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                )),
               ),     
              ), 
               Card(
+                 color: Color.fromRGBO(93, 123, 224, 0.659),
                child:ListTile(
-                title: Text('รายสัปดาห์'),
-                subtitle:Text('${_data?[0]?.weeknum ?? 'Loading'}')
+                title: Text('รายสัปดาห์',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                )),
+                subtitle:Text('${_data?[0]?.weeknum ?? 'Loading'}  ราย',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ))
               ),        
              ), 
              Card(
+               color: Color.fromRGBO(163, 214, 59, 0.659),
                child:ListTile(
-                title: Text('รักษาเอง'),
-                subtitle:Text('${_data?[0]?.caseWalkin ?? 'Loading'}')
+                title: Text('รักษาเอง',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                )),
+                subtitle:Text('${_data?[0]?.caseWalkin ?? 'Loading'}  ราย',
+               style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ) ,)
               ),        
              ),
              Card(
+               color: Color.fromRGBO(248, 2, 2, 0.66),
                child:ListTile(
-                title: Text('เสียชีวิต'),
-                subtitle:Text('${_data?[0]?.totalDeath ?? 'Loading'}')
+                title: Text('เสียชีวิต',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+                ),
+                subtitle:Text('${_data?[0]?.totalDeath ?? 'Loading'}  ราย',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 250, 250, 250),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),),),
               ),        
-             ),
+             
              
 
         ],

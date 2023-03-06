@@ -130,79 +130,83 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Center(child: Text(widget.title)),
 
       ),
-      body:ListView(
-        children:  [
-             Card(
-               color: Color.fromRGBO(214, 91, 63, 0.659),
-               child:ListTile(
-                title: Text('ผู้ติดเชื้อสะสม',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                )),
-                subtitle:Text('${_data?[0]?.totalCase ?? 'Loading'}  ราย',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                )),
-              ),     
-             ), 
-              Card(
-                 color: Color.fromRGBO(93, 123, 224, 0.659),
-               child:ListTile(
-                title: Text('รายสัปดาห์',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                )),
-                subtitle:Text('${_data?[0]?.weeknum ?? 'Loading'}  ราย',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ))
-              ),        
-             ), 
-             Card(
-               color: Color.fromRGBO(163, 214, 59, 0.659),
-               child:ListTile(
-                title: Text('รักษาเอง',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                )),
-                subtitle:Text('${_data?[0]?.caseWalkin ?? 'Loading'}  ราย',
-               style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ) ,)
-              ),        
-             ),
-             Card(
-               color: Color.fromRGBO(248, 2, 2, 0.66),
-               child:ListTile(
-                title: Text('เสียชีวิต',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                ),
-                ),
-                subtitle:Text('${_data?[0]?.totalDeath ?? 'Loading'}  ราย',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 250, 250, 250),
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                ),),),
-              ),        
-             
-             
+      body:Column(
+        children: [
+          ListView(
+            children:  [
+                 Card(
+                   color: Color.fromRGBO(214, 91, 63, 0.659),
+                   child:ListTile(
+                    title: Text('ผู้ติดเชื้อสะสม',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                    )),
+                    subtitle:Text('${_data?[0]?.totalCase ?? 'Loading'}  ราย',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    )),
+                  ),     
+                 ), 
+                  Card(
+                     color: Color.fromRGBO(93, 123, 224, 0.659),
+                   child:ListTile(
+                    title: Text('รายสัปดาห์',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                    )),
+                    subtitle:Text('${_data?[0]?.weeknum ?? 'Loading'}  ราย',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ))
+                  ),        
+                 ), 
+                 Card(
+                   color: Color.fromRGBO(163, 214, 59, 0.659),
+                   child:ListTile(
+                    title: Text('รักษาเอง',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                    )),
+                    subtitle:Text('${_data?[0]?.caseWalkin ?? 'Loading'}  ราย',
+                   style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ) ,)
+                  ),        
+                 ),
+                 Card(
+                   color: Color.fromRGBO(248, 2, 2, 0.66),
+                   child:ListTile(
+                    title: Text('เสียชีวิต',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    ),
+                    subtitle:Text('${_data?[0]?.totalDeath ?? 'Loading'}  ราย',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 250, 250, 250),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),),),
+                  ),        
+                 
+                 
 
+            ],
+          ),
         ],
       ),
     );
